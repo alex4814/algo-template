@@ -1,0 +1,85 @@
+\documentclass{article}
+
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{xcolor}
+\usepackage{listings}
+
+
+
+
+
+\begin{document}
+
+\title{Codings}
+\author{alex4814\footnote{alex4814.fu@gmail.com}}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\lstset{ % general command to set parameter(s)
+    language=[GNU]C++,
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\color{cyan}\bfseries,
+    commentstyle=\color{darkgray},
+    identifierstyle=,
+    stringstyle=\color{purple}\ttfamily,
+    tabsize=2,
+}
+
+
+\section{Geometry}
+
+\subsection{2-dimension}
+\subsubsection{Header Structures}
+\lstinputlisting{src/geometry/2-dimension/cg.h}
+
+\subsubsection{Point \& Vector}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/pv.h}
+
+\subsubsection{Distance}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/distance.h}
+
+\subsubsection{Position}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/position.h}
+
+\subsubsection{Intersection}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/intersect.h}
+
+\subsubsection{Convex Hull}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/ch.h}
+
+\subsubsection{Area}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/area.h}
+
+\subsubsection{Circle}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/circle.h}
+
+\subsubsection{Segment}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/segment.h}
+
+\subsubsection{Symmetry}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/symmetry.h}
+
+\subsubsection{Triangle}
+\lstinputlisting[firstline=10]{src/geometry/2-dimension/triangle.h}
+
+
+\subsection{3-dimension}
+\subsubsection{Header}
+\lstinputlisting{src/geometry/3-dimension/cg.h}
+
+\subsubsection{Point \& Vector}
+\lstinputlisting[firstline=10]{src/geometry/3-dimension/pv.h}
+
+\subsubsection{Distance}
+\lstinputlisting[firstline=10]{src/geometry/3-dimension/distance.h}
+
+\subsubsection{Convex Hull}
+\lstinputlisting[firstline=10]{src/geometry/3-dimension/ch.h}
+
+
+\end{document}
