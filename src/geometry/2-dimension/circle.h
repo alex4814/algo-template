@@ -22,13 +22,13 @@ void intersection_cl(Circle c, Point p, Vector v, Point &p1, Point &p2) {
 	p2.y = p0.y - (l2.y - l1.y) * t;
 }
 
-// pre-req: 保证圆与圆有交点, 圆心不重合
+// 前提：保证圆与圆有交点, 圆心不重合
 void intersection_cc(Circle c1, Circle c2, Point& p1, Point& p2){
 	double d = dis_pp(c1.c, c2.c);
 	double t = (1.0 + (c1.r * c1.r - c2.r * c2.r) / d / d) / 2;
 	Point u = Point(c1.c.x + (c2.c.x - c1.c.x) * t, c1.c.y + (c2.c.y - c1.c.y) * t);
 	Point v = Point(u.x + c1.c.y - c2.c.y, u.y - c1.c.x + c2.c.x);
-	intersection_cl(Circle c1, u, v - u, p1, p2);
+	intersection_cl(c1, u, v - u, p1, p2);
 }
 
 // 计算圆外一点与圆的两个切点
@@ -41,6 +41,7 @@ void point_of_tangency_cp(Circle c, Point p, Point &p1, Point &p2) {
 	p2 = p + v2 / length(v2) * d * cos(theta);
 }
 
+// 计算最小的圆覆盖平面上的点集
 Circle min_circle_cover(Point *p, int n) {
 	Point c = p[0]; double r = 0;
 	for (int i = 1; i < n; ++i) {
