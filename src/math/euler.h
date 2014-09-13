@@ -7,7 +7,7 @@
 
 
 
-int euler(int n) {
+int eulers_phi(int n) {
     int ret = 1;
     for (int i = 2; i * i <= n; ++i) {
         if (n % i == 0) {
@@ -20,7 +20,7 @@ int euler(int n) {
     return ret * (n > 1 ? n - 1 : 1);
 }
 
-void euler(int n) {
+void eulers_phi(int n) {
     static bool prime[MAXN];
     static int p[MAXN], _n = 0;
     static int phi[MAXN];
